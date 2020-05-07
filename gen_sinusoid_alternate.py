@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 import math
-import time
 from matplotlib.colors import ListedColormap
 
 #Choose gray colormap
@@ -32,7 +31,9 @@ def genSinusoid(sz, A, omega, rho):
 
 theta = np.pi/4
 omega = [np.cos(theta), np.sin(theta)]
-sinusoidParam = {'A':1, 'omega':omega, 'rho':np.pi/2, 'sz':(100,100)}
+sinusoidParam = {'A':1, 'omega':omega, 'rho':np.pi/2, 'sz':(750,750)}
+#sz used to set frequency (10 corresponding to 0.5 angles per degree and 1000 corresponding to 30 angles per degree)
+
 
 %matplotlib qt
 myimshow(genSinusoid(**sinusoidParam))
